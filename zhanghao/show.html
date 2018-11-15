@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	请输入城市：<input type="text" id="city" maxlength="30"><br>
+	<div id="hchart" style="width:500xp;height:350px"></div>
+</body>
+</html>
+<script src=""></script>
+
+<script>
+	$('#city').blur(function(){
+		var city = $(this).val();
+		if(city==''){
+			alert("城市不能为空且长度不能大于30");
+			return false;
+		}
+		var reg = /^[A-Za-z0-9\u4e00-\u9fa5]+$/;
+	})
+</script>
